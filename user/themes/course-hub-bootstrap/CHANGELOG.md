@@ -1,14 +1,51 @@
+# v1.3.8
+## 07/07/2016
+
+1. [](#improved)
+    * Improved accessibility of font awesome icons
+
+# v1.3.7
+## 06/26/2016
+
+1. [](#new)
+    * Added support for markdown-based site footer
+1. [](#improved)    
+    * Sidebar widget vertical spacing improved
+    * Updated Twitter widget code
+
+# v1.3.6
+## 06/23/2016
+
+1. [](#bugfix)
+    * Demo page content typo corrected
+1. [](#improved)    
+    * Adjusted h top and bottom margins
+
+# v1.3.5
+## 06/22/2016
+
+1. [](#new)
+    * Added flag to hide page titles
+    * Added setting to suppress the display of home menu link
+
+# v1.3.4
+## 06/20/2016
+
+1. [](#improved)
+    * Added header options to hide and change default GitHub edit link
+    * Updated multi-course demo pages
+
 # v1.3.3
 ## 06/16/2016
 
 1. [](#bugfix)
-    * Gravstrap plugin dependency removed.
+    * Gravstrap plugin dependency removed
 
 # v1.3.2
 ## 06/16/2016
 
 1. [](#bugfix)
-    * Twitter sidebar widget URL issue fixed.
+    * Twitter sidebar widget URL issue fixed
 
 # v1.3.1
 ## 06/15/2016
