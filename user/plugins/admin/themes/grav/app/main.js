@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import GPM, { Instance as gpm } from './utils/gpm';
 import KeepAlive from './utils/keepalive';
-import Updates, { Instance as updates } from './updates';
+import Updates, { Instance as updates, Notifications, Feed } from './updates';
 import Dashboard from './dashboard';
 import Pages from './pages';
 import Forms from './forms';
@@ -27,6 +27,9 @@ KeepAlive.start();
 global.setInterval(() => {
     contentScrollbar.update();
     sidebar.scroller.update();
+    Object.keys(Dashboard.Chart.Instances).forEach((chart) => {
+        Dashboard.Chart.Instances[chart].chart.update();
+    });
 }, 150);
 
 // global event to catch sidebar_state changes
@@ -58,6 +61,8 @@ export default {
     },
     Updates: {
         Updates,
+        Notifications,
+        Feed,
         Instance: updates
     },
     Sidebar: {

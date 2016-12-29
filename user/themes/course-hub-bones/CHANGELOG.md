@@ -1,3 +1,58 @@
+# v1.5.2
+## 12/27/2016
+
+1. [](#improved)
+    * Updated the names of all Git-related site and page header variables
+
+# v1.5.1
+## 12/08/2016
+
+1. [](#new)
+    * Added example weekly summary banner images
+
+# v1.5.0
+## 10/17/2016
+
+1. [](#improved)
+    * Updated custom page Blueprints for Course Hub options, including additional Git Repository page header options
+
+# v1.4.9
+## 10/09/2016
+
+1. [](#improved)
+    * Updated custom page Blueprints for Course Hub options
+
+# v1.4.8
+## 10/08/2016
+
+1. [](#new)
+    * Added custom page Blueprints for Course Hub options
+
+# v1.4.7
+## 10/06/2016
+
+1. [](#bugfix)
+    * Fixed links on example Schedule pages
+
+# v1.4.6
+## 10/06/2016
+
+1. [](#new)
+    * Added Markdown Font Awesome plugin
+    * Added example Schedule page
+
+# v1.4.5
+## 09/15/2016
+
+1. [](#bugfix)
+    * Fixed display issue with 'Featured' posts
+
+# v1.4.4
+## 08/28/2016
+
+1. [](#new)
+    * Added flag to hide posts from blog index
+
 # v1.4.3
 ## 07/22/2016
 

@@ -87,6 +87,14 @@ class Debugger
     public function addAssets()
     {
         if ($this->enabled()) {
+
+            // Only add assets if Page is HTML
+            $page = $this->grav['page'];
+            if ($page->templateFormat() != 'html') {
+                $this->enabled = false;
+                return;
+            }
+
             /** @var Assets $assets */
             $assets = $this->grav['assets'];
 
@@ -213,6 +221,21 @@ class Debugger
     {
         if ($this->enabled()) {
             $this->debugbar['messages']->addMessage($message, $label, $isString);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Dump exception into the Messages tab of the Debug Bar
+     *
+     * @param \Exception $e
+     * @return Debugger
+     */
+    public function addException(\Exception $e)
+    {
+        if ($this->enabled()) {
+            $this->debugbar['exceptions']->addException($e);
         }
 
         return $this;

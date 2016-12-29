@@ -87,6 +87,7 @@ class TwigExtension extends \Twig_Extension
             new \Twig_SimpleFilter('truncate', ['\Grav\Common\Utils', 'truncate']),
             new \Twig_SimpleFilter('truncate_html', ['\Grav\Common\Utils', 'truncateHTML']),
             new \Twig_SimpleFilter('json_decode', [$this, 'jsonDecodeFilter']),
+            new \Twig_SimpleFilter('array_unique', 'array_unique'),
         ];
     }
 
@@ -115,6 +116,8 @@ class TwigExtension extends \Twig_Extension
             new \Twig_SimpleFunction('url', [$this, 'urlFunc']),
             new \Twig_SimpleFunction('json_decode', [$this, 'jsonDecodeFilter']),
             new \Twig_SimpleFunction('get_cookie', [$this, 'getCookie']),
+            new \Twig_SimpleFunction('redirect_me', [$this, 'redirectFunc']),
+            new \Twig_SimpleFunction('range', [$this, 'rangeFunc']),
         ];
     }
 
@@ -142,12 +145,16 @@ class TwigExtension extends \Twig_Extension
     public function safeEmailFilter($str)
     {
         $email   = '';
-        $str_len = strlen($str);
-        for ($i = 0; $i < $str_len; $i++) {
-            $email .= "&#" . ord($str[$i]) . ";";
+        for ( $i = 0, $len = strlen( $str ); $i < $len; $i++ ) {
+            $j = rand( 0, 1);
+            if ( $j == 0 ) {
+                $email .= '&#' . ord( $str[$i] ) . ';';
+            } elseif ( $j == 1 ) {
+                $email .= $str[$i];
+            }
         }
 
-        return $email;
+        return str_replace( '@', '&#64;', $email );
     }
 
     /**
@@ -729,11 +736,15 @@ class TwigExtension extends \Twig_Extension
     }
 
     /**
-     * Authorize an action. Returns true if the user is logged in and has the right to execute $action.
+     * Authorize an action. Returns true if the user is logged in and
+     * has the right to execute $action.
      *
-     * @param string $action
-     *
-     * @return bool
+     * @param  string|array $action An action or a list of actions. Each
+     *                              entry can be a string like 'group.action'
+     *                              or without dot notation an associative
+     *                              array.
+     * @return bool                 Returns TRUE if the user is authorized to
+     *                              perform the action, FALSE otherwise.
      */
     public function authorize($action)
     {
@@ -741,11 +752,14 @@ class TwigExtension extends \Twig_Extension
             return false;
         }
 
-        $action = (array)$action;
-
-        foreach ($action as $a) {
-            if ($this->grav['user']->authorize($a)) {
-                return true;
+        $action = (array) $action;
+        foreach ($action as $key => $perms) {
+            $prefix = is_int($key) ? '' : $key . '.';
+            $perms = $prefix ? (array) $perms : [$perms => true];
+            foreach ($perms as $action => $authenticated) {
+                if ($this->grav['user']->authorize($prefix . $action)) {
+                    return $authenticated;
+                }
             }
         }
 
@@ -808,5 +822,31 @@ class TwigExtension extends \Twig_Extension
     public function regexReplace($subject, $pattern, $replace, $limit = -1)
     {
         return preg_replace($pattern, $replace, $subject, $limit);
+    }
+
+    /**
+     * redirect browser from twig
+     *
+     * @param string $url          the url to redirect to
+     * @param int $statusCode      statusCode, default 303
+     */
+    public function redirectFunc($url, $statusCode = 303)
+    {
+        header('Location: ' . $url, true, $statusCode);
+        die();
+    }
+
+    /**
+     * Generates an array containing a range of elements, optionally stepped
+     *
+     * @param int $start      Minimum number, default 0
+     * @param int $end        Maximum number, default `getrandmax()`
+     * @param int $step       Increment between elements in the sequence, default 1
+     *
+     * @return array
+     */
+    public function rangeFunc($start = 0, $end = 100, $step = 1)
+    {
+        return range($start, $end, $step);
     }
 }

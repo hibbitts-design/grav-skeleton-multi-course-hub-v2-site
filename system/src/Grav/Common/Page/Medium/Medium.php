@@ -100,7 +100,9 @@ class Medium extends Data implements RenderableInterface
         }
 
         $alternative->set('ratio', $ratio);
-        $this->alternatives[(float) $ratio] = $alternative;
+        $width = $alternative->get('width');
+
+        $this->alternatives[$width] = $alternative;
     }
 
     /**
@@ -148,8 +150,8 @@ class Medium extends Data implements RenderableInterface
     /**
      * Get/set querystring for the file's url
      *
-     * @param  string  $hash
-     * @param  boolean $withHash
+     * @param  string  $querystring
+     * @param  boolean $withQuestionmark
      * @return string
      */
     public function querystring($querystring = null, $withQuestionmark = true)
@@ -199,10 +201,11 @@ class Medium extends Data implements RenderableInterface
      * @param  string  $title
      * @param  string  $alt
      * @param  string  $class
+     * @param  string  $id
      * @param  boolean $reset
      * @return array
      */
-    public function parsedownElement($title = null, $alt = null, $class = null, $reset = true)
+    public function parsedownElement($title = null, $alt = null, $class = null, $id = null, $reset = true)
     {
         $attributes = $this->attributes;
 
@@ -238,6 +241,14 @@ class Medium extends Data implements RenderableInterface
                 $attributes['class'] = $class;
             } elseif (!empty($this->items['class'])) {
                 $attributes['class'] = $this->items['class'];
+            }
+        }
+
+        if (empty($attributes['id'])) {
+            if (!empty($id)) {
+                $attributes['id'] = $id;
+            } elseif (!empty($this->items['id'])) {
+                $attributes['id'] = $this->items['id'];
             }
         }
 
