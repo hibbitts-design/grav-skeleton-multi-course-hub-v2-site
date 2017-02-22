@@ -3990,7 +3990,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 10px 12px; /* Changed */
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -7077,7 +7077,7 @@ input[type="checkbox"] {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 216px;
+  height: 242px; /*Changed*/
   background-color: #e5e5e5;
 }
 

@@ -1,3 +1,56 @@
+# v1.5.9
+## 02/19/2017
+
+1. [](#improved)
+    * Revised handling of custom.css theme file to better support inherited theme usage
+
+# v1.5.8
+## 01/26/2017
+
+1. [](#improved)
+    * Updated icon of Edit in Git setup links
+
+# v1.5.7
+## 01/25/2017
+
+1. [](#new)
+    * Added Git Sync plugin as dependency
+    * Added CC License Picker display
+
+# v1.5.6
+## 01/14/2017
+
+1. [](#improved)
+    * Updated wording of Edit in Git links
+
+# v1.5.5
+## 01/14/2017
+
+1. [](#improved)
+    * Further refined Git Sync plugin config checks
+    * Updated included Font Awesome icons
+
+# v1.5.4
+## 01/13/2017
+
+1. [](#new)
+    * Added configuration assistance to Edit in Git links
+
+# v1.5.3
+## 01/08/2017
+
+1. [](#improved)
+    * Added styling to HTML alerts (thanks to OleVik)
+
+# v1.5.2
+## 01/07/2017
+
+1. [](#improved)
+    * Revised 'Edit in Git' URL calculation to align with other Grav projects
+    * Added link to guide first-time Edit this Page in Git config
+1. [](#bugfix)
+    * Changed required theme settings alerts from Javascript dialog to HTML
+
 # v1.5.1
 ## 12/27/2016
 
