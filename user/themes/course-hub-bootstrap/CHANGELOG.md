@@ -1,3 +1,19 @@
+# v1.6.1
+## 04/01/2017
+
+1. [](#bugfix)
+    * Removed redundant page template
+    * Removed redundant page blueprint
+
+1. [](#improved)
+    * Updated Twitter widget settings
+
+# v1.6.0
+## 02/23/2017
+
+1. [](#new)
+    * Added Edit this Theme in Git link
+
 # v1.5.9
 ## 02/19/2017
 
