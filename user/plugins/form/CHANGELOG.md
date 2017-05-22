@@ -1,3 +1,17 @@
+# v2.7.1
+## 05/22/2017
+
+1. [](#improved)
+    * Force modular sub-pages with forms to set `$never_cache_twig = true` to improve form processing reliability [#153](https://github.com/getgrav/grav-plugin-form/issues/153)
+    * Use new `Utils::getPagePathFromToken()` method
+    
+# v2.7.0
+## 05/16/2017
+
+1. [](#bugfix)
+    * Fix issue with dynamically added forms (Registration, Profile, Comments, etc) not processed [#149](https://github.com/getgrav/grav-plugin-form/issues/149)
+    * Fixed issue with nested values not being repopulated on form error [#140](https://github.com/getgrav/grav-plugin-form/issues/140)
+
 # v2.6.0
 ## 05/04/2017
 
