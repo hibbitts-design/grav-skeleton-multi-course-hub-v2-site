@@ -1,3 +1,29 @@
+# v1.6.8
+## 06/17/2017
+
+1. [](#bugfix)
+    * Fixed sidebar display when 'Chromeless Pages' setting is active
+
+# v1.6.7
+## 06/17/2017
+
+1. [](#new)
+    * Added option to hide site navigation elements (useful when embedding pages into another system, e.g. LMS)
+    * Added option to customize View/Edit in Git introductory text
+    * Added optional additional text to CC licenses
+    * Added option to hide sidebar on blog pages
+1. [](#improved)
+    * Adjusted spacing for 'Edit this Theme' link
+    * Broadened support for 'onlydisplaypagecontent' URL flag
+
+# v1.6.6
+## 05/29/2017
+
+1. [](#new)
+    * Added optional additional text to CC licenses
+1. [](#improved)
+    * Adjusted spacing for 'Edit this Theme' link
+
 # v1.6.5
 ## 05/15/2017
 
