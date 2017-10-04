@@ -1,3 +1,36 @@
+# v1.7.7
+## 10/02/2017
+
+1. [](#new)
+    * Added support for image captions on blog post image headers
+
+# v1.7.6
+## 09/28/2017
+
+1. [](#new)
+    * Added support for checkmarked lists in Important Reminders area
+
+# v1.7.5
+## 09/22/2017
+
+1. [](#improved)
+    * Improved global handling of 'chromeless' display mode for embedded pages (thanks Ricardo)
+1. [](#bugfix)
+    * Removed support for initial 'chromeless' feature URL flag alias 'onlydisplaypagecontent'
+
+# v1.7.4
+## 09/08/2017
+
+1. [](#improved)
+    * Added site name to default RSS/Atom Feed names
+    * Ordering for home page modular content areas now set in parent page frontmatter
+
+# v1.7.3
+## 09/07/2017
+
+1. [](#bugfix)
+    * Set alphabetical ordering for home page modular content areas
+
 # v1.7.2
 ## 07/03/2017
 

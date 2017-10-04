@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Composer\\CaBundle\\CaBundle' => $vendorDir . '/composer/ca-bundle/src/CaBundle.php',
     'DOMLettersIterator' => $vendorDir . '/antoligy/dom-string-iterators/src/DOMLettersIterator.php',
     'DOMWordsIterator' => $vendorDir . '/antoligy/dom-string-iterators/src/DOMWordsIterator.php',
     'DebugBar\\Bridge\\CacheCacheCollector' => $vendorDir . '/maximebf/debugbar/src/DebugBar/Bridge/CacheCacheCollector.php',
@@ -39,6 +40,9 @@ return array(
     'DebugBar\\DataCollector\\TimeDataCollector' => $vendorDir . '/maximebf/debugbar/src/DebugBar/DataCollector/TimeDataCollector.php',
     'DebugBar\\DataFormatter\\DataFormatter' => $vendorDir . '/maximebf/debugbar/src/DebugBar/DataFormatter/DataFormatter.php',
     'DebugBar\\DataFormatter\\DataFormatterInterface' => $vendorDir . '/maximebf/debugbar/src/DebugBar/DataFormatter/DataFormatterInterface.php',
+    'DebugBar\\DataFormatter\\DebugBarVarDumper' => $vendorDir . '/maximebf/debugbar/src/DebugBar/DataFormatter/DebugBarVarDumper.php',
+    'DebugBar\\DataFormatter\\VarDumper\\DebugBarHtmlDumper' => $vendorDir . '/maximebf/debugbar/src/DebugBar/DataFormatter/VarDumper/DebugBarHtmlDumper.php',
+    'DebugBar\\DataFormatter\\VarDumper\\SeekingData' => $vendorDir . '/maximebf/debugbar/src/DebugBar/DataFormatter/VarDumper/SeekingData.php',
     'DebugBar\\DebugBar' => $vendorDir . '/maximebf/debugbar/src/DebugBar/DebugBar.php',
     'DebugBar\\DebugBarException' => $vendorDir . '/maximebf/debugbar/src/DebugBar/DebugBarException.php',
     'DebugBar\\HttpDriverInterface' => $vendorDir . '/maximebf/debugbar/src/DebugBar/HttpDriverInterface.php',
@@ -682,6 +686,7 @@ return array(
     'Twig\\Extension\\InitRuntimeInterface' => $vendorDir . '/twig/twig/src/Extension/InitRuntimeInterface.php',
     'Twig\\Extension\\OptimizerExtension' => $vendorDir . '/twig/twig/src/Extension/OptimizerExtension.php',
     'Twig\\Extension\\ProfilerExtension' => $vendorDir . '/twig/twig/src/Extension/ProfilerExtension.php',
+    'Twig\\Extension\\RuntimeExtensionInterface' => $vendorDir . '/twig/twig/src/Extension/RuntimeExtensionInterface.php',
     'Twig\\Extension\\SandboxExtension' => $vendorDir . '/twig/twig/src/Extension/SandboxExtension.php',
     'Twig\\Extension\\StagingExtension' => $vendorDir . '/twig/twig/src/Extension/StagingExtension.php',
     'Twig\\Extension\\StringLoaderExtension' => $vendorDir . '/twig/twig/src/Extension/StringLoaderExtension.php',

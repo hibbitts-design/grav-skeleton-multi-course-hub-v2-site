@@ -174,7 +174,7 @@ class Grav extends Container
         }
 
         if ($code === null) {
-            $code = $this['config']->get('system.pages.redirect_default_code', 301);
+            $code = $this['config']->get('system.pages.redirect_default_code', 302);
         }
 
         if (isset($this['session'])) {
@@ -500,5 +500,7 @@ class Grav extends Container
                 Utils::download($page->path() . DIRECTORY_SEPARATOR . $uri->basename(), $download);
             }
         }
+
+        return $page;
     }
 }
