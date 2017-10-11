@@ -5,6 +5,24 @@ form:
     fields:
         sectionone:
             type:                              section
+            title:                             Chromeless Pages
+            underline:                         true
+
+            fields:
+                chromeless.enabled:
+                    type:                      toggle
+                    label:                     Hide Global Navigation Elements on all Pages
+                    description:               'When enabled, only page content will be displayed. This is often useful when embedding Course Hub pages within another system (e.g. an LMS such as Canvas using the <a href="https://www.eduappcenter.com/apps/63#.WUWhaRPysXo" target="_blank">Redirect Tool</a> LTI).'
+                    highlight:                 1
+                    default:                   0
+                    options:
+                        1:                     Yes
+                        0:                     No
+                    validate:
+                        type:                  bool
+
+        sectiontwo:
+            type:                              section
             title:                             Edit Page in Git Link
             underline:                         true
 
@@ -18,6 +36,13 @@ form:
                         'none':                None
                         'menu':                Menu
                         'page':                Page
+
+                gitrepo.editnotetext:
+                  type:                        input.text
+                  size:                        long
+                  label:                       Text before Edit Page Link (on only Pages)
+                  default:                     'Have a suggestion or correction?'
+                  description:                 'The text before the View/Edit Git link (only when displayed on a Page). For example, ''Have a suggestion or correction?''.'
 
                 gitrepo.editlinktext:
                   type:                        input.text
@@ -44,7 +69,8 @@ form:
                     description:               "URL path to the pages folder, but with '/pages' and everything following it removed. For example, 'https://github.com/paulhibbitts/demo-grav-course-hub/tree/master'."
                     validate:
                         type:                  URL
-        sectiontwo:
+
+        sectionthree:
             type:                              section
             title:                             Edit Site Theme Files in Git Link
             underline:                         true
@@ -66,7 +92,7 @@ form:
                   default:                     'Site Theme Files'
                   description:                 Customize the Edit Site Theme Files link text.
 
-        sectionthree:
+        sectionfour:
             type:                              section
             title:                             Menubar
             underline:                         true
@@ -94,7 +120,7 @@ form:
                         label:                 Text
                       .icon:
                         type:                  text
-                        label:                 Text
+                        label:                 Icon
                       .url:
                         type:                  text
                         label:                 URL
@@ -111,7 +137,7 @@ form:
                     validate:
                         type:                  bool
 
-        sectionfour:
+        sectionfive:
             type:                              section
             title:                             Blog Posts
             underline:                         true
@@ -122,16 +148,28 @@ form:
                     size:                      small
                     label:                     Default Blog Post Font Awesome Icon
                     default:                   'calendar-o'
+                    description:               Short name, e.g. 'calendar-o'.
                     help:                      Determines the default Font Awesome icon used for the blog posts.
                     validate:
                         type:                  text
 
-        sectionfive:
+        sectionsix:
             type:                              section
             title:                             Sidebar
             underline:                         true
 
             fields:
+
+                hidesidebaronblogpages.enabled:
+                    type:                      toggle
+                    label:                     Display Sidebar on Blog Pages
+                    highlight:                 0
+                    default:                   0
+                    options:
+                        0:                     Yes
+                        1:                     No
+                    validate:
+                        type:                  bool
 
                 twittertimeline.enabled:
                     type:                      toggle
@@ -169,7 +207,7 @@ form:
                         min:                   100
                         max:                   1000
 
-        sectionsix:
+        sectionseven:
             type:                              section
             title:                             Creative Commons (CC) License
             underline:                         true
