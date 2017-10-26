@@ -216,3 +216,11 @@ right: 0;
 .list-item {
   margin: 20px 0 20px !important;
 }
+
+.gitrepo-link-note {
+  color: #888888;
+}
+
+.creative-commons-license {
+  color: #888888;
+}
