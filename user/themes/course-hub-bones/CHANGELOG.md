@@ -1,3 +1,43 @@
+# v1.9.73
+## 12/16/2017
+
+1. [](#bugfix)
+    * Fixed outstanding template issue for multi-course setup
+
+# v1.9.72
+## 12/15/2017
+
+1. [](#improved)
+    * Changed mobile menu breakpoint to better accomodate a larger number of Menubar items
+1. [](#bugfix)
+    * Fixed issue of hiding Homepage link in Menubar option
+
+# v1.9.71
+## 12/14/2017
+
+1. [](#new)
+    * Added swipe deck page template
+    * Added swipe deck link only page template
+    * Added swipe figure CSS for embedded slide decks
+1. [](#improved)
+    * Updated embed.ly card link only page template
+1. [](#bugfix)
+    * Fixed Git Sync link template custom icon issue
+
+# v1.9.7
+## 12/12/2017
+
+1. [](#new)
+    * Added embed.ly card link only page template
+
+# v1.9.6
+## 12/11/2017
+
+1. [](#improved)
+    * Updated course hub demo pages in theme '_demo' folder
+1. [](#bugfix)
+    * Fixed example embedded slides and associated HTML and PDF links
+
 # v1.9.5
 ## 12/04/2017
 
