@@ -1,3 +1,24 @@
+# v1.9.93
+## 01/11/2018
+
+1. [](#bugfix)
+    * Fixed incorrect URL within 'advanced' course example pages
+    * Restored missing example page image
+
+# v1.9.92
+## 01/10/2018
+
+1. [](#improved)
+    * Changed the display location of horizontal rule between modular and child blog items
+
+# v1.9.91
+## 01/10/2018
+
+1. [](#new)
+    * Added support for opening links in top window
+1. [](#improved)
+    * Changed default link behavior for 'summaryonly' "View all..." link
+
 # v1.9.90
 ## 01/09/2018
 
