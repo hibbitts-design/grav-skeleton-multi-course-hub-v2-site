@@ -1,8 +1,50 @@
+# v2.0.0
+## 01/22/2018
+
+1. [](#improved)
+    * Updated 'basic', 'intermediate' and 'advanced' course examples in theme '_demo' folder
+
+# v1.9.99
+## 01/19/2018
+
+1. [](#improved)
+    * Updated 'basic', 'intermediate' and 'advanced' course examples in theme '_demo' folder
+1. [](#bugfix)
+    * Restored missing link in Theme Blueprint for theme docs
+    * Corrected Blueprint option name for displaying 'View all of...' links as buttons
+
+# v1.9.98
+## 01/19/2018
+
+1. [](#improved)
+    * Relocated Hide Blog Page Sidebar from Site options to Blog List options
+
+# v1.9.97
+## 01/18/2018
+
+1. [](#improved)
+    * Relocated Blog Post custom icon from Site options to Blog List options
+    * Updated 'intermediate', 'advanced' and default course demo pages in theme '_demo' folder
+
+# v1.9.96
+## 01/17/2018
+
+1. [](#improved)
+    * Updated handling of blog item display, where if no summary is present that the same content is displayed for both the summary and actual page
+
+# v1.9.95
+## 01/15/2018
+
+1. [](#new)
+    * Added experimental support for Blog page list option to display 'View all of...' links as buttons in Blog page summaries
+1. [](#improved)
+    * Updated 'basic', 'intermediate' and 'advanced' course examples in theme '_demo' folder
+
 # v1.9.94
 ## 01/12/2018
 
 1. [](#improved)
-    * Revised default link behavior for 'summaryonly' "View all..." link
+    * Revised default link behavior for 'summaryonly' "View all of..." link
 
 # v1.9.93
 ## 01/11/2018
